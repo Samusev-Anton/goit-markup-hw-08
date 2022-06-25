@@ -1,0 +1,30 @@
+.conteiner {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+@media screen and (min-width:$mobile) {
+    width: 480px;
+}
+    
+    @media screen and (min-width:$tablet) {
+        width: $tablet;
+    }
+    @media screen and (min-width:$desktop) {
+        width: $desktop;
+    }
+}
+
+.skills,
+.prodaction,
+.team,
+.clients,
+.project {
+    padding-top: 94px;
+    padding-bottom: 94px;
+        @media screen and (max-width:1199px) {
+                padding-bottom: 60px;
+                padding-top: 60px;
+            }
+}

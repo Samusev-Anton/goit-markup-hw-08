@@ -1,0 +1,53 @@
+.hero {
+    background-color: #c4c4c4;
+    margin: 0 auto;
+    margin-top: 60px;
+    max-height: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../img/fon-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ececec;
+}
+
+.header {
+    text-align: center;
+}
+
+.header__title {
+    display: flexbox;
+    margin-bottom: 30px;
+    color: $white;
+    width: 360px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*button*/
+.hero-button {
+    @extend %second-button;
+    box-shadow: none;
+    padding: 10px 32px;
+    min-width: 200px;
+        &:hover,
+            &:focus {
+                background-color: #188ce8;
+                color: $white;
+                box-shadow: 0px 2px 3px rgba(135, 206, 235, 0.12),
+                    0px 1px 1px rgba(135, 206, 235, 0.14), 0px 2px 1px rgba(135, 206, 235, 0.2);
+            }
+}
+

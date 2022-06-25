@@ -1,0 +1,129 @@
+.head {
+    background: $white;
+    width: 100vw;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #ececec;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.headline {
+    // @extend %aline;
+        background: $white;
+            padding: 16px 0;
+}
+
+/* LOGO */
+
+.logo {
+    @extend %logo;
+}
+
+.logo__part {
+    color: $accent-color;
+}
+
+/* NAVIGATION */
+.contact-pages__link,
+.navi-pages__link {
+    @extend %aline;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+}
+
+.navi-pages {
+    display: flex;
+    margin-left: 93px;
+}
+
+.navi-pages__link {
+    display: inline-block;
+    position: relative;
+    color: $primary-text-color;
+        transition: color $time-transition $cubik;
+    &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            border-radius: 4px;
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            transform: scaleX(0);
+            transition: transform $time-transition $cubik;
+        }
+&:hover:after,
+&:focus:after {
+    transform: scaleX(1);
+}
+&:hover,
+&:focus {
+    color: $accent-color;
+}
+}
+
+
+
+.current__link {
+    color: $accent-color;
+}
+
+
+.current__link::after {
+    content: "";
+    transform: scaleX(1);
+}
+
+.navi-pages__item:not(:first-child) {
+    margin-left: 50px;
+}
+
+/* CONTACTS */
+.contact-pages {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-pages__icon {
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+    fill: $icon-color;
+    transition: fill $time-transition $cubik;
+}
+
+.contact-pages__link {
+    transition: color $time-transition $cubik;
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        }
+    
+        &:hover .contact-pages__icon,
+        &:focus .contact-pages__icon {
+            fill: $accent-color;
+        }
+}
+
+
+.contact-pages__item:nth-child(2) {
+    margin-left: 30px;
+}
+
+.contact-pages__link {
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
