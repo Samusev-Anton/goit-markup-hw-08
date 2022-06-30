@@ -1,172 +1,201 @@
 .footer {
-    background: $black-back;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background: $black-back;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__conteiner {
-    background: $black-back;
-            @media screen and (max-width:767px) {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                            }
-    }
-
+  display: flex;
+  align-items: baseline;
+  background: $black-back;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 
 /* блок контактов */
 
 .footer__logo {
-    display: block;
-    margin-bottom: 20px;
-    color: $white;
-    padding: 0;
+  display: block;
+  margin-bottom: 20px;
+  color: $white;
+  padding: 0;
+  @media screen and (max-width: 1199px) {
     text-align: center;
+  }
 }
-.footer-address__item {
-        @media screen and (max-width:767px) {
-                    display: flex;
-                        flex-direction: column;
-                        align-items: center;
 
-            }
+.footer-address__item {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer-address__item:not(:last-child) {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .footer-address__map {
-    color: $white;
-    transition: color $time-transition $cubik;
+  color: $white;
+  transition: color $time-transition $cubik;
 }
 
 .footer-address__email,
 .footer-address__tel {
-    color: rgba(255, 255, 255, 0.6);
-    transition: color $time-transition $cubik;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color $time-transition $cubik;
 }
 
 .footer-address__link {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    &:hover,
-        &:focus {
-            color: $accent-color;
-        }
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-
 
 /* присоединение к соцсетям-футер */
 .footer-network {
-    @media screen and (max-width:767px) {
-        margin-top: 60px;        
-    }
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
 }
 .network__text {
-    margin-bottom: 20px;
-    color: $white;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    @media screen and (max-width:767px) {
-        text-align: center;
-    }
+  margin-bottom: 20px;
+  color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .network__item:not(:first-child) {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .network__list {
-@extend %justify;
+  @extend %justify;
 }
-
-// .footer-network {
-//     margin-left: 70px;
-// }
 
 .network__link {
-@extend %aline-justify;
-@extend %network__link;
-    background-color: rgba(255, 255, 255, 0.1);
-    &:hover,
-        &:focus {
-            background-color: $accent-color;
-            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-                0px 2px 2px rgba(0, 0, 0, 0.12);
-        }
+  @extend %aline-justify;
+  @extend %network__link;
+  background-color: rgba(255, 255, 255, 0.1);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
-
 .network__icon {
-@extend %network__icon;
-    fill: $white;
+  @extend %network__icon;
+  fill: $white;
 }
 
 /* форма футер */
 .footer-action {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
     width: 100%;
-    @media screen and (max-width:767px) {
-        margin-top: 60px;
-    }
-        // display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
+  // display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
 }
 
 .footer-action__text {
-    // margin-bottom: 20px;
-    color: $white;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
     text-align: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
 }
 
-// .footer-action__form {
-//     display: flex;
-// }
+.footer-action__form {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
 
 .footer-action__input {
-    display: block;
-padding: 15px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: $black-back;
+  display: block;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $black-back;
+  color: $white;
+  &::placeholder {
     color: $white;
-    &::placeholder {
-            color: $white;
-        }
-        @media screen and (max-width:767px) {
-width: 100%;  
-margin-top: 20px;      }
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 450px;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
 }
+
 .btn-wrapper {
-    @media screen and (max-width:767px) {
-        display: flex;
-justify-content: center;
-margin-top: 20px;    }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
 }
 
 .button-action {
-    @extend %button;
-@extend %aline;
-display: flex;
-    padding: 10px 29px;
-    color: $white;
-    background-color: $accent-color;
+  @extend %button;
+  @extend %aline;
+  display: flex;
+  padding: 13px 29px;
+  color: $white;
+  background-color: $accent-color;
 }
 
 .button-action__icon {
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    fill: $white;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: $white;
 }
