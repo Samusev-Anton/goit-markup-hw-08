@@ -1,20 +1,24 @@
 .backdrop {
-  @media screen and (min-width: $tablet) {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $time-transition $cubik;
-  overflow-y: scroll;
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px;
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.9) translate(-50%, -50%);
   opacity: 0;
+  @media screen and (min-width: $tablet) {
+    transform: scale(0.9) translate(-50%, -50%);
+  }
 }
 
 .backdrop.is-hidden {
@@ -25,12 +29,21 @@
 .form-wrapper {
   position: relative;
   min-width: 320px;
-  //   width: 528px;
-  //   height: auto;
-  //   top: 430px;
-  //   left: 50%;
+  max-width: 450px;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $tablet) {
+    height: auto;
+    top: 430px;
+    left: 50%;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+  }
   opacity: 1;
-  //   transform: scale(1) translate(-50%, -50%);
   background-color: $white;
   transition: scale $time-transition $cubik, opacity $time-transition $cubik;
   z-index: 999;
@@ -158,8 +171,12 @@
   @extend %aline-justify;
   width: 100%;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   letter-spacing: 0.03em;
   margin-bottom: 30px;
   color: $secondary-text-color;
@@ -186,10 +203,20 @@
   border-color: $accent-color;
 }
 
+.checbox-wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
 .checkbox__link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   letter-spacing: 0.03em;
   color: $accent-color;
   margin-left: 5px;

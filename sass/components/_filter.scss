@@ -34,6 +34,7 @@
     margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
+    justify-content: center;
     margin-bottom: 36px;
   }
   @media screen and (max-width: $desktop) {

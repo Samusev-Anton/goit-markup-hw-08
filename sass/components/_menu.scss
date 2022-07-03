@@ -2,11 +2,12 @@
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
-    position: relative;
-    width: 100%;
+    width: calc(100% + 30px);
+    // width: 100%;
     top: 0;
     left: 0;
-    min-height: 796px;
+    // height: 100vw;
+    height: 796px;
     background-color: $white;
     padding: 48px 40px;
     overflow-y: scroll;
@@ -83,8 +84,17 @@
 .contact-pages__link.email {
   @media screen and (max-width: 767px) {
     font-weight: 500;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
+.contact-pages__link.tel {
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
   }
 }
@@ -93,11 +103,13 @@
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 300px;
   }
 }
 
 .navi-pages {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 300px;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: 90px;
@@ -151,6 +163,9 @@
 
 /* CONTACTS */
 .contact-pages {
+  @media screen and (max-width: 767px) {
+    // margin-bottom: auto;
+  }
   @media screen and (min-width: $tablet) {
     margin-left: auto;
     .contact-pages__link {
@@ -211,6 +226,7 @@
 
 .menu-network {
   display: flex;
+  flex-wrap: wrap;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
