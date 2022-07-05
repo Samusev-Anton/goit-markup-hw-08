@@ -27,31 +27,18 @@
 
 
 .team__title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.18;
+      @include font(700, 28px, 33px, 0.03em, null);
     text-align: center;
-    letter-spacing: 0.03em;
     margin-bottom: 50px;
 }
 
 .team__name {
-    color: $primary-text-color;
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+      @include font(500, 16px, 19px, 0.03em, $primary-text-color);
     margin-bottom: 10px;
 }
 
 .team__profession {
-    color: $secondary-text-color;
-
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+          @include font(500, 16px, 19px, 0.03em, $primary-text-color);
     margin-bottom: 16px;
 }
 

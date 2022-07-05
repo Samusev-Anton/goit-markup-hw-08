@@ -49,15 +49,15 @@
 
 .footer-address__email,
 .footer-address__tel {
+  font-family: Roboto;
   color: rgba(255, 255, 255, 0.6);
   transition: color $time-transition $cubik;
 }
 
 .footer-address__link {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-family: Roboto;
+  text-decoration: none;
+  @include font(500, 14px, 24px, 0.03em, null);
   &:hover,
   &:focus {
     color: $accent-color;
@@ -75,11 +75,7 @@
 }
 .network__text {
   margin-bottom: 20px;
-  color: $white;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 16px, 0.03em, $white);
   text-transform: uppercase;
   @media screen and (max-width: 1199px) {
     text-align: center;
@@ -129,11 +125,7 @@
 }
 
 .footer-action__text {
-  color: $white;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 16px, 0.03em, $white);
   text-transform: uppercase;
   @media screen and (max-width: 1199px) {
     text-align: center;

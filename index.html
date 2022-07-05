@@ -19,9 +19,23 @@
     <header class="head">
       <div class="conteiner headline">
         <a class="logo link" lang="en" href=""
-          ><span class="logo__part">Web</span>Studio</a
-        >
+          ><span class="logo__part">Web</span>Studio</a>
+          <button
+          class="menu-button is-open"
+          data-menu-button
+          aria-expanded="false">
+          <svg
+           class="menu-open"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню">
+            <use
+              href="./img/symbol-defs.svg#icon-menu_40px"
+            ></use>
+          </svg>
+        </button>
         <div class="menu-container" data-menu>
+          <div class="menu-wrapper">
           <nav>
             <ul class="navi-pages list">
               <li class="navi-pages__item">
@@ -77,27 +91,21 @@
               <a href="" class="menu-network__link link">LinkedIn</a>
             </li>
           </ul>
-        </div>
-        <button
-          class="menu-button is-open"
-          data-menu-button
-          aria-expanded="false"
-        >
-          <svg
+                          <button class="menu-close-button"
+                                    data-menu-button
+          aria-expanded="false">
+          <svg   class="menu-close"
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
           >
             <use
-              class="menu-open"
-              href="./img/symbol-defs.svg#icon-menu_40px"
-            ></use>
-            <use
-              class="menu-close"
               href="./img/symbol-defs.svg#icon-close_40px"
             ></use>
           </svg>
         </button>
+          </div>
+        </div>
       </div>
     </header>
     <main>
