@@ -43,7 +43,7 @@
 }
 
 .team__profession {
-  @include font(500, 16px, 19px, 0.03em, $primary-text-color);
+  @include font(400, 16px, 19px, 0.03em, $primary-text-color);
   margin-bottom: 16px;
 }
 
