@@ -962,6 +962,7 @@ body {
 }
 
 .skills__title {
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
