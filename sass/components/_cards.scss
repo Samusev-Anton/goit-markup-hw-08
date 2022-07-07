@@ -28,6 +28,9 @@
 .cards-thumb {
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: 380px) {
+    overflow-y: scroll;
+  }
 }
 
 .cards-thumb__hover {
@@ -37,7 +40,7 @@
   @include font(400, 18px, 28px, 0.03em, $white);
   background-color: rgba(33, 150, 243, 0.9);
   padding: 77px 24px;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform $time-transition $cubik;
   .cards__link:hover &,
   .cards__link:focus & {

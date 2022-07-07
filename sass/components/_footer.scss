@@ -30,11 +30,17 @@
   }
 }
 
+address {
+  text-decoration: none;
+  font-style: inherit;
+}
+
 .footer-address__item {
   @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
   }
 }
 

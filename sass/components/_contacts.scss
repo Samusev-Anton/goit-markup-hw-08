@@ -27,6 +27,12 @@
   @media screen and (max-width: 767px) {
     @include font(500, 24px, 27px, 0.02em, null);
   }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-top: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 32px 0;
+  }
 }
 
 .contact-pages__link.tel {
@@ -35,6 +41,12 @@
   }
   @media screen and (max-width: 380px) {
     font-size: 30px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-bottom: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 32px 0;
   }
 }
 
@@ -77,9 +89,6 @@
 }
 @media screen and (min-width: $tablet) and (max-width: 1199px) {
   .contact-pages__item:nth-child(1) {
-    padding: 15px 0 5px 0;
-  }
-  .contact-pages__item:nth-child(2) {
-    padding: 5px 0 15px 0;
+    margin-bottom: 10px;
   }
 }

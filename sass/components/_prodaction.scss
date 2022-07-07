@@ -27,6 +27,10 @@
   position: relative;
   z-index: -1;
 }
+.prodaction__title {
+  @include font(700, 36px, 42px, 0.03em, null);
+  text-align: center;
+}
 
 .prodaction__text {
   position: absolute;

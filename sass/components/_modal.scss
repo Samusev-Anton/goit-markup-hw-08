@@ -66,7 +66,8 @@
   height: 18px;
   fill: currentColor;
 
-  .modal-close:hover & {
+  .modal-close:hover &,
+  .modal-close:focus & {
     fill: $accent-color;
   }
 }
@@ -182,6 +183,11 @@
 
 .checkbox__input:checked + .checkbox__icon {
   background-color: $accent-color;
+  border-color: $accent-color;
+}
+
+.checkbox__input:hover + .checkbox__icon,
+.checkbox__input:focus + .checkbox__icon {
   border-color: $accent-color;
 }
 
