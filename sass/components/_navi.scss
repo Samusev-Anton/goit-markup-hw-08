@@ -18,9 +18,6 @@
 }
 
 .navi-pages {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 300px;
-  }
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: 90px;
