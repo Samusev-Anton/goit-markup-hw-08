@@ -710,7 +710,6 @@ body {
 
 .form-wrapper {
   position: relative;
-  min-width: 320px;
   max-width: 450px;
   opacity: 1;
   background-color: #ffffff;
@@ -761,6 +760,11 @@ body {
 
 .form-area {
   padding: 40px;
+}
+@media screen and (max-width: 380px) {
+  .form-area {
+    padding: 40px 20px;
+  }
 }
 
 .form-area__title {
@@ -913,6 +917,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .checkbox__link {
