@@ -433,6 +433,7 @@ body {
     background-color: #ffffff;
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     z-index: 99;
@@ -483,7 +484,7 @@ body {
 }
 
 .mobile-menu {
-  padding: 0 0 48px 40px;
+  padding: 0 0 55px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
