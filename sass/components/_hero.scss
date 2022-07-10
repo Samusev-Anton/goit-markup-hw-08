@@ -1,6 +1,7 @@
 .hero {
   margin: 0 auto;
   margin-top: 64px;
+  max-width: 1600px;
   @media screen and (min-width: $tablet) {
     margin-top: 80px;
   }
@@ -33,7 +34,7 @@
       background-image: url(../img/header-768@2x.jpg);
     }
   }
-  @media screen and (min-width: 1000px) and (max-width: 1600px) {
+  @media screen and (min-width: 1000px) {
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;

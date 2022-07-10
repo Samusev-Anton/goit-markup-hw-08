@@ -187,6 +187,7 @@ address {
   @extend %aline;
   display: flex;
   padding: 13px 29px;
+  font-weight: 700;
   color: $white;
   background-color: $accent-color;
 }

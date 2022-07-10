@@ -51,7 +51,7 @@
   color: #212121;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
@@ -157,20 +157,20 @@ body {
   }
 }
 
-.skills,
-.prodaction,
-.team,
+.skills-conteiner,
+.prodaction-conteiner,
+.team-conteiner,
 .clients,
-.project {
+.project-conteiner {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 @media screen and (max-width: 1199px) {
-  .skills,
-.prodaction,
-.team,
+  .skills-conteiner,
+.prodaction-conteiner,
+.team-conteiner,
 .clients,
-.project {
+.project-conteiner {
     padding-bottom: 60px;
     padding-top: 60px;
   }
@@ -213,6 +213,7 @@ body {
     font-size: 24px;
     line-height: 1.125;
     letter-spacing: 0.02em;
+    color: #757575;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -232,6 +233,7 @@ body {
     font-size: 34px;
     line-height: 1.1764705882;
     letter-spacing: 0.02em;
+    color: #757575;
   }
 }
 @media screen and (max-width: 380px) {
@@ -569,6 +571,7 @@ body {
 .hero {
   margin: 0 auto;
   margin-top: 64px;
+  max-width: 1600px;
   padding-top: 118px;
   padding-bottom: 118px;
   height: 400px;
@@ -607,7 +610,7 @@ body {
     background-image: url(../img/header-768@2x.jpg);
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1600px) {
+@media screen and (min-width: 1000px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -616,7 +619,7 @@ body {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/header-desktop.jpg);
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1600px) and (min-device-pixel-ratio: 2), screen and (min-width: 1000px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1000px) and (max-width: 1600px) and (min-resolution: 192dpi), screen and (min-width: 1000px) and (max-width: 1600px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1000px) and (min-device-pixel-ratio: 2), screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1000px) and (min-resolution: 192dpi), screen and (min-width: 1000px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url(../img/header-desktop@2x.jpg);
     max-width: 1600px;
@@ -1483,6 +1486,7 @@ address {
   display: -ms-flexbox;
   display: flex;
   padding: 13px 29px;
+  font-weight: 700;
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -1614,16 +1618,15 @@ address {
   position: relative;
   overflow: hidden;
 }
-@media screen and (max-width: 380px) {
-  .cards-thumb {
-    overflow-y: scroll;
-  }
-}
 
 .cards-thumb__hover {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.overlay__text {
+  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5555555556;
@@ -1631,6 +1634,7 @@ address {
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 77px 24px;
+  overflow-y: scroll;
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1638,7 +1642,7 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.cards__link:hover .cards-thumb__hover, .cards__link:focus .cards-thumb__hover {
+.cards__link:hover .overlay__text, .cards__link:focus .overlay__text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
