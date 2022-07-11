@@ -10,6 +10,7 @@
     top: 0;
     left: 0;
     z-index: 99;
+    outline: transparent;
     visibility: hidden;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
@@ -27,6 +28,7 @@
 .menu-toggle {
   display: block;
   margin-left: auto;
+  outline: transparent;
   padding: 0;
   border: none;
   background-color: transparent;
