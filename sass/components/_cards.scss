@@ -31,26 +31,29 @@
 }
 
 .cards-thumb__hover {
+  @media screen and (max-width: 360px) {
+    align-items: flex-start;
+    overflow-y: scroll;
+  }
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.overlay__text {
-  display: block;
-  overflow-y: scroll;
-  @include font(400, 18px, 28px, 0.03em, $white);
+  height: 100%;
+  display: flex;
+  padding: 0 24px;
+  align-items: center;
   background-color: rgba(33, 150, 243, 0.9);
-  padding: 77px 24px;
+
   transform: translateY(101%);
   transition: transform $time-transition $cubik;
   .cards__link:hover &,
   .cards__link:focus & {
     transform: translateY(0);
   }
-  // @media screen and (max-width: 380px) {
-  //   overflow-y: scroll;
-  // }
+}
+
+.overlay__text {
+  @include font(400, 18px, 28px, 0.03em, $white);
 }
 
 .cards__link {
