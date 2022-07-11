@@ -17,14 +17,17 @@
   }
 }
 
-.navi-pages {
+.nav {
   @media screen and (min-width: $tablet) {
-    display: flex;
     margin-left: 90px;
     .navi-pages__item:not(:first-child) {
       margin-left: 50px;
     }
   }
+}
+
+.navi-pages {
+  display: flex;
 }
 
 .navi-pages__link {

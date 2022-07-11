@@ -38,10 +38,10 @@
 
 .overlay__text {
   display: block;
+  overflow-y: scroll;
   @include font(400, 18px, 28px, 0.03em, $white);
   background-color: rgba(33, 150, 243, 0.9);
   padding: 77px 24px;
-  overflow-y: scroll;
   transform: translateY(101%);
   transition: transform $time-transition $cubik;
   .cards__link:hover &,
@@ -56,7 +56,6 @@
 .cards__link {
   display: flex;
   flex-direction: column;
-  height: 100%;
   box-shadow: none;
   transition: box-shadow 500ms $cubik;
   outline: transparent;
